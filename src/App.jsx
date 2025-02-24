@@ -4,12 +4,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
 
-// Import halaman utama (beranda)
+// Import halaman utama (Beranda)
 import Home from "./pages/Beranda/Home";
-
-// Import halaman lainnya
 import Program from "./pages/Beranda/program";
+
+// Import halaman Informasi
 import LegalDocuments from "./pages/Informasi/LegalDocuments";
+
+// Import halaman Pengaduan (Menggunakan index.js untuk ekspor)
+import Pengaduan from "./pages/Pengaduan";
 
 function App() {
   return (
@@ -18,14 +21,20 @@ function App() {
         <Navbar />
         <div className="flex-grow">
           <Routes>
-            {/* Beranda sebagai halaman utama */}
+            {/* Halaman Beranda sebagai halaman utama */}
             <Route path="/" element={<Home />} />
 
-            {/* Halaman lain yang ada di navbar */}
+            {/* Halaman lainnya di Navbar */}
             <Route path="/program" element={<Program />} />
             <Route path="/informasi" element={<LegalDocuments />} />
 
-            {/* Tambahkan halaman lainnya */}
+            {/* Halaman Pengaduan */}
+            <Route path="/pengaduan/csirt" element={<Pengaduan.CSIRT />} />
+            <Route path="/pengaduan/sp4n-lapor" element={<Pengaduan.SP4N />} />
+            <Route path="/pengaduan/tata-cara" element={<Pengaduan.TataCara />} />
+            <Route path="/pengaduan/wbs" element={<Pengaduan.WBS />} />
+
+            {/* Tambahkan halaman lainnya jika diperlukan */}
           </Routes>
         </div>
         <Footer />

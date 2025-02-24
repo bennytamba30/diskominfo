@@ -6,12 +6,12 @@ export default function LegalDocuments() {
   const [activeTab, setActiveTab] = useState("Produk Hukum");
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className=" bg-slate-100 min-h-screen">
       {/* Section Informasi */}
       <section className="relative w-full bg-blue-700">
-        <div className="container mx-auto px-6 xl:max-w-7xl relative pt-24 pb-40 text-white">
+        <div className="container mx-auto px-6 2xl:px-0 xl:max-w-7xl relative pt-2 pb-48 text-white">
           <nav className="hidden md:flex">
-            <a href="/informasi" className="font-bold text-sm text-gray-50" aria-current="page">
+            <a href="/informasi" className="font-bold text-sm text-gray-50 mb-18" aria-current="page">
               Informasi
             </a>
           </nav>
@@ -26,7 +26,7 @@ export default function LegalDocuments() {
             </a>
           </nav>
 
-          <h1 className="font-bold text-3xl mt-4">Informasi</h1>
+          <h1 className="font-bold text-3xl mt-6">Informasi</h1>
           <p className="text-sm mt-3">
             Akses informasi produk hukum terpadu dan dokumen resmi yang telah dirancang dan disusun Diskominfo Jabar.
           </p>
